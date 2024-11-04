@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DShare</title>
+    <style>
+        /* Basic reset for padding and margin */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page background and main layout */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container for the contact form */
+        .contact-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Page Title */
+        .contact-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Input and textarea styling */
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            resize: vertical;
+        }
+
+        /* Submit button styling */
+        .contact-form button {
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #155db2;
+        }
+
+        /* Contact info section */
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 500px) {
+            .contact-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div class="contact-info">
+            <p>For additional assistance, email us at <strong>support@dshare.com</strong> or call us at <strong>(123) 456-7890</strong>.</p>
+            <p>Office Hours: Monday to Friday, 9 AM - 5 PM</p>
+        </div>
+    </div>
+
+</body>
+</html>

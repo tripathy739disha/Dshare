@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+  height: 200vh;
+}
 .main{
     background-image: url("assests/photos/backg.jpg");
     background-position: center center;
@@ -51,15 +54,9 @@ nav button{
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
-}
-
-.button-27:disabled {
-  pointer-events: none;
 }
 
 .button-27:hover {
@@ -175,5 +172,55 @@ input[type="text"]{
     background-color: grey;
     padding-top:300px
 }
+.document-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.document-button {
+  width: 180px;
+  height: 80px;
+  background-color: #021f44; 
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+/* Hover effect */
+.document-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
 
+/* Icon styling */
+.document-icon {
+  font-size: 24px;
+  color: #ffffffcc; /* Slightly lighter icon color */
+}
+
+/* Document label */
+.document-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.boxi{
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-color: antiquewhite;
+  box-shadow: #222;
+}

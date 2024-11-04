@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DShare</title>
+    <style>
+        /* Basic reset for padding and margin */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page background and main layout */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Container for the FAQ */
+        .faq-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FAQ Title */
+        .faq-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1a73e8;
+            text-align: center;
+        }
+
+        /* Style for each question and answer section */
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Question styling */
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: #1a73e8;
+        }
+
+        /* Answer styling */
+        .faq-answer {
+            display: none;
+            padding: 0 0 10px 0;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Icons for expand/collapse */
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        /* Rotate icon when active */
+        .active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What is DShare?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                DShare is a secure online platform that allows you to store, manage, and share your personal and government-issued documents electronically, safely, and conveniently.
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do I upload documents to DShare?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                To upload documents, log in to your DShare account, navigate to the "Upload Document" section, select the type of document you want to upload, and then choose the file from your device to upload securely.
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is my data secure on DShare?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                Yes, DShare employs advanced encryption and data protection protocols to ensure your documents and personal information are stored securely and only accessible by authorized users.
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Can I share documents with others?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                Absolutely! DShare allows you to share your documents with trusted parties through a secure link. You can manage permissions and control access at any time.
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What types of documents can I store on DShare?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                You can store a variety of documents, including identification documents (like Aadhaar, PAN), educational certificates, financial documents, health records, and more.
+            </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How do I reset my password?</span>
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                If you've forgotten your password, go to the login page, click on "Forgot Password," and follow the instructions to reset it. You’ll need access to your registered email or phone for verification.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle FAQ answer visibility
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            element.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
