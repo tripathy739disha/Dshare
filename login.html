@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <style>
-       
         body, html {
             height: 100%;
             margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            justify-content: center;
+            align-items: center;
             background-color: #161515; 
         }
 
@@ -53,8 +52,9 @@
         button:hover {
             background-color: #0056b3;
         }
+
         .back-link {
-            margin-top: 15px; /* Space between the login box and the link */
+            margin-top: 15px;
         }
 
         .back-link a {
@@ -66,16 +66,15 @@
         .back-link a:hover {
             text-decoration: underline;
         }
-        
     </style>
 </head>
 <body>
     <div class="login-container">
         <h2>Welcome user</h2>
-        <form action="/submit-login" method="POST">
+        <form action="login.php" method="POST" id="login-form">
             <div class="input-group">
-                <label for="username or emailid">Enter a valid user name or email address</label>
-                <input type="text" id="username" name="username" placeholder="email or user id" pattern="(^[a-zA-Z0-9._-]{3,20}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)" required>
+                <label for="username">Enter a valid username or email address</label>
+                <input type="text" id="username" name="email" placeholder="email or user id" pattern="(^[a-zA-Z0-9._-]{3,20}$)|(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -85,7 +84,7 @@
         </form>
     </div>
     <div class="back-link">
-        <a href="index.html" style="color: #ffffff;"><b>Home</b></a>
+        <a href="index.html"><b>Home</b></a>
     </div>
 </body>
 </html>
